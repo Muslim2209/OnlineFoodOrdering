@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load static %}
+    <!-- PAGE CONTETNT -->
+    <section class="gl-page-content-section">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- SEARCH MAP -->
+                <div class="map-wrapper map-split">
+                    <div id="map"></div>
+                </div>
+                <!-- SEARCH MAP END -->
+                <!-- SEARCH -->
+                <div id="map-result-section" class="map-result-wrapper">
+                    <div class="widget clearfix">
+                        <!-- /widget heading -->
+                        <div class="widget-heading">
+                            <h3 class="widget-title text-dark">
+                                Search filter
+                            </h3>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="widget-body">
+                            <form class="row">
+                                <div class="col-xs-12 col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="exampleInputKeyword"
+                                               placeholder="Keyword"></div>
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="exampleInputText2"
+                                               placeholder="Enter Location"></div>
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-lg-3">
+                                    <div class="form-group">
+                                        <select class="form-control" id="exampleSelect1">
+                                            <option>Category</option>
+                                            <option>Fast food</option>
+                                            <option>Pizza</option>
+                                            <option>Pasta</option>
+                                            <option>Fish meal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-lg-3"><a href="food_results.html"
+                                                                            class="btn theme-btn  btn-block">Submit</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end:Pricing widget -->
+                    <div class="widget clearfix">
+                        <!-- /widget heading -->
+                        <div class="widget-heading">
+                            <h3 class="widget-title text-dark">
+                                Price range
+                            </h3>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="widget-body">
+                            <div class="range-slider m-b-10"><span id="ex2CurrentSliderValLabel"> Filter by price:<span
+                                    id="ex2SliderVal"><strong>35</strong></span>€</span>
+                                <br>
+                                <input id="ex2" type="text" data-slider-min="1" data-slider-max="100"
+                                       data-slider-step="1"
+                                       data-slider-value="35"/></div>
+                        </div>
+                    </div>
+                    <!-- end:Pricing widget -->
+                    <div class="search-result-wrapper">
+                        <div class="row">
+                            <!-- Each popular food item starts -->
+                            <div class="col-xs-12 col-sm-6 col-md-6 food-item">
+                                <div class="food-item-wrap">
+                                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
+                                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
+                                        <div class="rating pull-left"><i class="fa fa-star"></i> <i
+                                                class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star-o"></i></div>
+                                        <div class="review pull-right"><a href="#">198 reviews</a></div>
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">The South"s Best Fried Chicken</a></h5>
+                                        <div class="product-name">Fried Chicken with cheese</div>
+                                        <div class="price-btn-block"><span class="price">$ 15,99</span> <a href="#"
+                                                                                                           class="btn theme-btn-dash pull-right">Order
+                                            Now</a></div>
+                                    </div>
+                                    <div class="restaurant-block">
+                                        <div class="left">
+                                            <a class="pull-left" href="#"> <img src="http://placehold.it/50x46"
+                                                                                alt="Restaurant logo"> </a>
+                                            <div class="pull-left right-text"><a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-like-part pull-right"><i class="fa fa-heart-o"></i>
+                                            <span>48</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Each popular food item ends -->
+                            <!-- Each popular food item starts -->
+                            <div class="col-xs-12 col-sm-6 col-md-6 food-item">
+                                <div class="food-item-wrap">
+                                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
+                                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
+                                        <div class="rating pull-left"><i class="fa fa-star"></i> <i
+                                                class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star-o"></i></div>
+                                        <div class="review pull-right"><a href="#">198 reviews</a></div>
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">The South"s Best Fried Chicken</a></h5>
+                                        <div class="product-name">Fried Chicken with cheese</div>
+                                        <div class="price-btn-block"><span class="price">$ 18,49</span> <a href="#"
+                                                                                                           class="btn theme-btn-dash pull-right">Order
+                                            Now</a></div>
+                                    </div>
+                                    <div class="restaurant-block">
+                                        <div class="left">
+                                            <a class="pull-left" href="#"> <img src="http://placehold.it/50x46"
+                                                                                alt="Restaurant logo"> </a>
+                                            <div class="pull-left right-text"><a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-like-part pull-right"><i class="fa fa-heart-o"></i>
+                                            <span>48</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Each popular food item starts -->
+                            <!-- Each popular food item starts -->
+                            <div class="col-xs-12 col-sm-6 col-md-6 food-item">
+                                <div class="food-item-wrap">
+                                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
+                                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
+                                        <div class="rating pull-left"><i class="fa fa-star"></i> <i
+                                                class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star-o"></i></div>
+                                        <div class="review pull-right"><a href="#">198 reviews</a></div>
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">The South"s Best Fried Chicken</a></h5>
+                                        <div class="product-name">Fried Chicken with cheese</div>
+                                        <div class="price-btn-block"><span class="price">$ 15,99</span> <a href="#"
+                                                                                                           class="btn theme-btn-dash pull-right">Order
+                                            Now</a></div>
+                                    </div>
+                                    <div class="restaurant-block">
+                                        <div class="left">
+                                            <a class="pull-left" href="#"> <img src="http://placehold.it/50x46"
+                                                                                alt="Restaurant logo"> </a>
+                                            <div class="pull-left right-text"><a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-like-part pull-right"><i class="fa fa-heart-o"></i>
+                                            <span>48</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Each popular food item ends -->
+                            <!--  popular food item starts -->
+                            <div class="col-xs-12 col-sm-6 col-md-6 food-item">
+                                <div class="food-item-wrap">
+                                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
+                                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
+                                        <div class="rating pull-left"><i class="fa fa-star"></i> <i
+                                                class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star-o"></i></div>
+                                        <div class="review pull-right"><a href="#">198 reviews</a></div>
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">The South"s Best Fried Chicken</a></h5>
+                                        <div class="product-name">Fried Chicken with cheese</div>
+                                        <div class="price-btn-block"><span class="price">$ 18,49</span> <a href="#"
+                                                                                                           class="btn theme-btn-dash pull-right">Order
+                                            Now</a></div>
+                                    </div>
+                                    <div class="restaurant-block">
+                                        <div class="left">
+                                            <a class="pull-left" href="#"> <img src="http://placehold.it/50x46"
+                                                                                alt="Restaurant logo"> </a>
+                                            <div class="pull-left right-text"><a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-like-part pull-right"><i class="fa fa-heart-o"></i>
+                                            <span>48</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Each popular food item ends -->
+                            <!--  popular food item starts -->
+                            <div class="col-xs-12 col-sm-6 col-md-6 food-item">
+                                <div class="food-item-wrap">
+                                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
+                                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
+                                        <div class="rating pull-left"><i class="fa fa-star"></i> <i
+                                                class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star-o"></i></div>
+                                        <div class="review pull-right"><a href="#">198 reviews</a></div>
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">The South"s Best Fried Chicken</a></h5>
+                                        <div class="product-name">Fried Chicken with cheese</div>
+                                        <div class="price-btn-block"><span class="price">$ 18,49</span> <a href="#"
+                                                                                                           class="btn theme-btn-dash pull-right">Order
+                                            Now</a></div>
+                                    </div>
+                                    <div class="restaurant-block">
+                                        <div class="left">
+                                            <a class="pull-left" href="#"> <img src="http://placehold.it/50x46"
+                                                                                alt="Restaurant logo"> </a>
+                                            <div class="pull-left right-text"><a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-like-part pull-right"><i class="fa fa-heart-o"></i>
+                                            <span>48</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Each popular food item ends -->
+                            <!--  popular food item starts -->
+                            <div class="col-xs-12 col-sm-6 col-md-6 food-item">
+                                <div class="food-item-wrap">
+                                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
+                                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
+                                        <div class="rating pull-left"><i class="fa fa-star"></i> <i
+                                                class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star-o"></i></div>
+                                        <div class="review pull-right"><a href="#">198 reviews</a></div>
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">The South"s Best Fried Chicken</a></h5>
+                                        <div class="product-name">Fried Chicken with cheese</div>
+                                        <div class="price-btn-block"><span class="price">$ 18,49</span> <a href="#"
+                                                                                                           class="btn theme-btn-dash pull-right">Order
+                                            Now</a></div>
+                                    </div>
+                                    <div class="restaurant-block">
+                                        <div class="left">
+                                            <a class="pull-left" href="#"> <img src="http://placehold.it/50x46"
+                                                                                alt="Restaurant logo"> </a>
+                                            <div class="pull-left right-text"><a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-like-part pull-right"><i class="fa fa-heart-o"></i>
+                                            <span>48</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Each popular food item ends -->
+                            <!--  popular food item starts -->
+                            <div class="col-xs-12 col-sm-6 col-md-6 food-item">
+                                <div class="food-item-wrap">
+                                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
+                                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
+                                        <div class="rating pull-left"><i class="fa fa-star"></i> <i
+                                                class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star-o"></i></div>
+                                        <div class="review pull-right"><a href="#">198 reviews</a></div>
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">The South"s Best Fried Chicken</a></h5>
+                                        <div class="product-name">Fried Chicken with cheese</div>
+                                        <div class="price-btn-block"><span class="price">$ 18,49</span> <a href="#"
+                                                                                                           class="btn theme-btn-dash pull-right">Order
+                                            Now</a></div>
+                                    </div>
+                                    <div class="restaurant-block">
+                                        <div class="left">
+                                            <a class="pull-left" href="#"> <img src="http://placehold.it/50x46"
+                                                                                alt="Restaurant logo"> </a>
+                                            <div class="pull-left right-text"><a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-like-part pull-right"><i class="fa fa-heart-o"></i>
+                                            <span>48</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Each popular food item ends -->
+                            <!--  popular food item starts -->
+                            <div class="col-xs-12 col-sm-6 col-md-6 food-item">
+                                <div class="food-item-wrap">
+                                    <div class="figure-wrap bg-image" data-image-src="http://placehold.it/380x210">
+                                        <div class="distance"><i class="fa fa-pin"></i>1240m</div>
+                                        <div class="rating pull-left"><i class="fa fa-star"></i> <i
+                                                class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star-o"></i></div>
+                                        <div class="review pull-right"><a href="#">198 reviews</a></div>
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">The South"s Best Fried Chicken</a></h5>
+                                        <div class="product-name">Fried Chicken with cheese</div>
+                                        <div class="price-btn-block"><span class="price">$ 18,49</span> <a href="#"
+                                                                                                           class="btn theme-btn-dash pull-right">Order
+                                            Now</a></div>
+                                    </div>
+                                    <div class="restaurant-block">
+                                        <div class="left">
+                                            <a class="pull-left" href="#"> <img src="http://placehold.it/50x46"
+                                                                                alt="Restaurant logo"> </a>
+                                            <div class="pull-left right-text"><a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-like-part pull-right"><i class="fa fa-heart-o"></i>
+                                            <span>48</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Each popular food item ends -->
+                            <div class="col-xs-12">
+                                <nav aria-label="...">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-label="Previous"> <span
+                                                    aria-hidden="true">&laquo;</span> <span
+                                                    class="sr-only">Previous</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1 <span
+                                                class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
+                                                <span class="sr-only">Next</span> </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SEARCH END-->
+            </div>
+        </div>
+    </section>
+    <!-- PAGE CONTETNT END -->
+
+    <script src="{% static 'js/markerclusterer.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="{% static 'js/jquery.googlemap.js' %}"></script>
+    <script src="{% static 'js/data.json' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+{% endblock %}
